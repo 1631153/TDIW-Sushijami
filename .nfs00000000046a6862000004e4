@@ -1,0 +1,113 @@
+<?php
+include_once __DIR__."/Model/gets.php";
+$filesPublicPath = 'img/';
+actualizar_valores();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingDung | Profile Template</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <form action="/index.php?accion=actualizar_usuari" method="post" enctype="multipart/form-data">
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+            Perfil
+        </h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Canviar contrasenya</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Info</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <label for="image"></label>
+                            <div class="card-body media align-items-center">
+                                <?php if (!empty($_SESSION["img_path"])): ?>
+                                    <img src="img/fitxers/<?php echo $_SESSION["img_path"]; ?>" width = 60 title="<?php echo $_SESSION['img_path']; ?>">
+                                <?php else: ?>
+                                    <img src="https://cdn5.dibujos.net/dibujos/pintados/201336/chino-comiendo-arroz-culturas-china-pintado-por-kuskuruska-9844833.jpg" width = 60">
+                                <?php endif; ?>
+                                <div class="media-body ml-4">
+                                    <label for="image" class="btn btn-outline-primary">
+                                        <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
+                                    </label> &nbsp;
+                                    <button type="submit" name="submit">Apujar Foto</button>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Nom</label>
+                                    <?php $nombreUsuario = $_SESSION['nombre'];?>
+                                    <input type="text" name="nou-nom" class="form-control" value="<?php echo $nombreUsuario ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Correu electronic</label>
+                                    <?php $correo = $_SESSION['correo'];?>
+                                    <input type="text" name="nou-correu" class="form-control mb-1" value="<?php echo $correo ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Contrasenya actual</label>
+                                    <input type="password" name="contra-actual" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nova contrasenya</label>
+                                    <input type="password" name="nova-contra" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repetir nova contrasenya</label>
+                                    <input type="password" name="nova-contra2" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Adreça</label>
+                                    <?php $adreca = $_SESSION['adreca'];?>
+                                    <input type="text" name="nova-adreca" class="form-control" value="<?php echo $adreca ?>">
+                                </div>
+                            </div>
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Codi_postal</label>
+                                    <?php $codi_postal = $_SESSION['codi_postal'];?>
+                                    <input type="text" name="nova-codi" class="form-control" value="<?php echo $codi_postal ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Poblacio</label>
+                                    <?php $poblacio = $_SESSION['poblacio'];?>
+                                    <input type="text" name="nova-poblacio" class="form-control" value="<?php echo $poblacio ?>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+            <button type="submit" name="canvis" class="btn btn-primary">Guardar canvis</button>&nbsp;
+            <button type="button" class="btn btn-default" onclick="window.location.href='index.php';">Cancelar</button>
+        </div>
+    </div>
+    </form>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</body>
+</html>

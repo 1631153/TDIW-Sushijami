@@ -1,0 +1,22 @@
+Exemples d’errors greus: 
+- Apareixen “warnings”, errors crítics o altres missatges del servidor que no aporten res a l’usuari (s’ha de tenir la visualització d’errors activada). 
+- Duplicitat de codi. 
+
+Exemples d’errors lleus: 
+- Codi mal tabulat, variables i funcions no autoexplicatives, 
+- errors de sintaxis HTML i CSS.
+
+
+S’analitzarà el web amb una pantalla de 1.280px i 1920px d’amplada.
+Exemples d’errors greus: 
+- Fallen algunes funcionalitats en alguns apartats. 
+- No queda clar quins errors hi ha als formularis.
+
+ERRORES A CORREGIR
+
+Detall de producte amb Fetch
+Actualizar productes y precio al momento en la página principal
+Para eliminar un producto hay que recargar la página
+Un poco de código duplicado en CSS (no he tenido tiempo para arreglarlo)
+Quizá algunas variables i funciones no son fáciles de entender, maybe algúnos comentarios irian bien
+En la base de datos no se guarda el 0 en caso de un código postal que empieza por 0. Ej: 08783 guarda 8783 no hay manera de arreglarlo :(

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="deic-dc19.uab.cat" id="7d4da5d5-84f9-401f-b3e2-b5738bbc5515" keyPath="C:\Users\jacot\Downloads\id_rsa" port="170" nameFormat="DESCRIPTIVE" username="tdiw-m7" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

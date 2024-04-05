@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="10e63bc4-b3fb-424b-9b10-042648d571c9" name="Serverweb" url="http://tdiw-m7.deic-docencia.uab.cat">
+        <fileTransfer rootFolder="/home/TDIW/tdiw-m7/public_html" accessType="SFTP" host="deic-dc19.uab.cat" port="170" sshConfigId="7d4da5d5-84f9-401f-b3e2-b5738bbc5515" sshConfig="tdiw-m7@deic-dc19.uab.cat:170 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

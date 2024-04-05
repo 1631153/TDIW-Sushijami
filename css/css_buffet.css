@@ -1,0 +1,78 @@
+.formDiv {
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formDiv label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.formDiv select,
+.formDiv input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formDiv #dproductes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+.imagen-container {
+    text-align: center;
+}
+
+.imagen-container img {
+    display: inline-block;
+}
+
+.nom_producte {
+    text-align: center;
+}

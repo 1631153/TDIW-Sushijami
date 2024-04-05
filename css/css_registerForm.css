@@ -1,0 +1,71 @@
+.wrapper{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    top: calc(100px + 50px);
+    left: 37%;
+    transform: translateX(-50%);
+    transition: transform .5s , height .2s ease;
+    overflow: hidden;
+    transform: scale(0);
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .formulari{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .icon-close::before{
+    content: "X";
+    font-size: 25px;
+    color: black;
+}
+
+.wrapper.active-login{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 550px;
+}
+
+.wrapper .formulari.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .formulari.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .formulari.registre{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+    top: -20px;
+}
+
+.wrapper.active .formulari.registre{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
