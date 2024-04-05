@@ -26,4 +26,4 @@ GENERAL:
 - Qualitat del codi perfecte
 - UX+UI amb alguna funcionalitat que falla en alguns apartats
 
-A la carpeta 'VIDEOS' es troben els videos que mostren la pagina web en funcionament.
+Ja no es pot accedir a la pagina web degut a que la universitat ha tancat tot (inclós Base de Dades). A la carpeta 'MULTIMEDIA' es troben videos que mostren la pagina web en funcionament en els ultims dies. 
